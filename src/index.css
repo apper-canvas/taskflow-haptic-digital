@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'react-toastify/dist/ReactToastify.css';
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  .font-jakarta {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .toast-compact {
+    min-height: 48px !important;
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+  }
+  
+  .toast-compact .Toastify__toast-body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .toast-compact .Toastify__close-button {
+    position: absolute !important;
+    top: 8px !important;
+    right: 8px !important;
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
+.Toastify__toast-container {
+  z-index: 9999 !important;
+  top: 1rem !important;
+  right: 1rem !important;
+}
+
+.Toastify__toast {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+}
+
+.Toastify__toast--success {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%) !important;
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%) !important;
+}
+
+.Toastify__toast--warning {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
+}
+
+.Toastify__toast--info {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%) !important;
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    #f3f4f6 0px,
+    #e5e7eb 40px,
+    #f3f4f6 80px
+  );
+  background-size: 200px;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+.task-priority-high {
+  border-left: 4px solid #EF4444;
+}
+
+.task-priority-medium {
+  border-left: 4px solid #F59E0B;
+}
+
+.task-priority-low {
+  border-left: 4px solid #10B981;
+}
+
+.task-priority-none {
+  border-left: 4px solid #E5E7EB;
+}
+
+.focus-mode .task-card:not(.task-focused) {
+  opacity: 0.3;
+  filter: blur(1px);
+}
+
+.task-focused {
+  transform: scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.drag-over {
+  background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%);
+  transform: scale(1.02);
+}
+
+.drag-placeholder {
+  height: 2px;
+  background: linear-gradient(90deg, #F59E0B, #D97706);
+  border-radius: 1px;
+  margin: 4px 0;
+}

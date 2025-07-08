@@ -1,0 +1,90 @@
+[
+  {
+    "Id": 1,
+    "title": "Review quarterly marketing budget",
+    "description": "Analyze Q3 spending and prepare recommendations for Q4",
+    "completed": false,
+    "dueDate": "2024-01-15T09:00:00.000Z",
+    "categoryId": "work",
+    "priority": 1,
+    "createdAt": "2024-01-10T08:30:00.000Z",
+    "completedAt": null
+  },
+  {
+    "Id": 2,
+    "title": "Schedule dentist appointment",
+    "description": "Annual cleaning and checkup",
+    "completed": false,
+    "dueDate": "2024-01-12T14:00:00.000Z",
+    "categoryId": "personal",
+    "priority": 2,
+    "createdAt": "2024-01-09T10:15:00.000Z",
+    "completedAt": null
+  },
+  {
+    "Id": 3,
+    "title": "Finish React component library",
+    "description": "Complete remaining components and documentation",
+    "completed": false,
+    "dueDate": "2024-01-20T17:00:00.000Z",
+    "categoryId": "work",
+    "priority": 3,
+    "createdAt": "2024-01-08T09:45:00.000Z",
+    "completedAt": null
+  },
+  {
+    "Id": 4,
+    "title": "Buy groceries for dinner party",
+    "description": "Wine, appetizers, and main course ingredients",
+    "completed": true,
+    "dueDate": "2024-01-11T16:00:00.000Z",
+    "categoryId": "personal",
+    "priority": 4,
+    "createdAt": "2024-01-07T11:20:00.000Z",
+    "completedAt": "2024-01-11T15:30:00.000Z"
+  },
+  {
+    "Id": 5,
+    "title": "Learn advanced TypeScript patterns",
+    "description": "Focus on conditional types and template literals",
+    "completed": false,
+    "dueDate": null,
+    "categoryId": "learning",
+    "priority": 5,
+    "createdAt": "2024-01-06T14:00:00.000Z",
+    "completedAt": null
+  },
+  {
+    "Id": 6,
+    "title": "Plan weekend hiking trip",
+    "description": "Research trails and check weather forecast",
+    "completed": false,
+    "dueDate": "2024-01-13T10:00:00.000Z",
+    "categoryId": "personal",
+    "priority": 6,
+    "createdAt": "2024-01-05T16:30:00.000Z",
+    "completedAt": null
+  },
+  {
+    "Id": 7,
+    "title": "Update portfolio website",
+    "description": "Add recent projects and improve mobile responsiveness",
+    "completed": false,
+    "dueDate": "2024-01-25T12:00:00.000Z",
+    "categoryId": "work",
+    "priority": 7,
+    "createdAt": "2024-01-04T13:15:00.000Z",
+    "completedAt": null
+  },
+  {
+    "Id": 8,
+    "title": "Read 'Clean Architecture' book",
+    "description": "Chapter 8-12 on component principles",
+    "completed": false,
+    "dueDate": null,
+    "categoryId": "learning",
+    "priority": 8,
+    "createdAt": "2024-01-03T09:00:00.000Z",
+    "completedAt": null
+  }
+]
