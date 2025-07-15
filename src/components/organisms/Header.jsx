@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import ApperIcon from '@/components/ApperIcon'
 import Button from '@/components/atoms/Button'
-
+import LogoutButton from '@/components/molecules/LogoutButton'
 const Header = ({ onMenuToggle, isMobileMenuOpen }) => {
   return (
     <motion.header 
@@ -31,13 +31,14 @@ const Header = ({ onMenuToggle, isMobileMenuOpen }) => {
           </div>
         </div>
 
-        <div className="flex items-center gap-2">
+<div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" className="hidden sm:flex">
             <ApperIcon name="Settings" className="h-5 w-5" />
           </Button>
           <Button variant="ghost" size="icon" className="hidden sm:flex">
             <ApperIcon name="Bell" className="h-5 w-5" />
           </Button>
+          <LogoutButton />
         </div>
       </div>
     </motion.header>
