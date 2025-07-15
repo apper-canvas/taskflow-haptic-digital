@@ -1,9 +1,14 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import ApperIcon from '@/components/ApperIcon'
-import Button from '@/components/atoms/Button'
-import LogoutButton from '@/components/molecules/LogoutButton'
+import React from "react";
+import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
+import { cn } from "@/utils/cn";
+import ApperIcon from "@/components/ApperIcon";
+import Button from "@/components/atoms/Button";
+import SearchBar from "@/components/molecules/SearchBar";
+import LogoutButton from "@/components/molecules/LogoutButton";
 const Header = ({ onMenuToggle, isMobileMenuOpen }) => {
+  const { user } = useSelector((state) => state.user);
+  
   return (
     <motion.header 
       initial={{ y: -20, opacity: 0 }}
@@ -20,29 +25,29 @@ const Header = ({ onMenuToggle, isMobileMenuOpen }) => {
           >
             <ApperIcon name={isMobileMenuOpen ? "X" : "Menu"} className="h-5 w-5" />
           </Button>
-          
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-600 to-purple-700 flex items-center justify-center">
-              <ApperIcon name="CheckSquare" className="h-5 w-5 text-white" />
-            </div>
-            <h1 className="text-xl font-bold font-jakarta bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
-              TaskFlow
-            </h1>
-          </div>
+          <SearchBar />
         </div>
 
-<div className="flex items-center gap-2">
+        <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" className="hidden sm:flex">
             <ApperIcon name="Settings" className="h-5 w-5" />
           </Button>
           <Button variant="ghost" size="icon" className="hidden sm:flex">
             <ApperIcon name="Bell" className="h-5 w-5" />
           </Button>
+          <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+            <span className="text-purple-700 font-medium text-sm">
+              {user?.firstName?.[0] || user?.emailAddress?.[0]?.toUpperCase() || 'U'}
+            </span>
+          </div>
+          <span className="text-sm font-medium text-gray-700 hidden sm:block">
+            {user?.firstName || user?.emailAddress || 'User'}
+          </span>
           <LogoutButton />
         </div>
       </div>
     </motion.header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
